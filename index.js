@@ -56,6 +56,7 @@ function total() {
 
     var totalPrice = totalPrice + price;
   }
+  return(totalPrice);
 }
 
 function removeFromCart(item) {
