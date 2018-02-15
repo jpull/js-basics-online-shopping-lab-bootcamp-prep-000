@@ -60,12 +60,21 @@ function total() {
 }
 
 function removeFromCart(item) {
-    for (let i = 0, l = cart.length; i < l; i++) {
-      for (let itemName in cart[i]) {
-        if (itemName === item) return(cart.splice(i,1));
-      }
+  let itemInCart = false;
+
+  for (let i = 0, l = cart.length; i < l; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      itemInCart = true;
+      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      l--;
     }
-    return('That item is not in your cart.');
+  }
+
+  if (!itemInCart) {
+    console.log("That item is not in your cart.");
+  }
+
+  return cart;
 }
 
 function placeOrder(cardNumber) {
