@@ -19,7 +19,10 @@ function addToCart(item) {
 function viewCart() {
   if (!cart.length) { return "Your shopping cart is empty." }
   else {
-    return "In your cart, you have lemons at $79."
+    while (cart.length) {
+      var cartPrint = cart.shift()
+    }
+    return "In your cart, you have ${cartPrint}"
   }
 }
 
