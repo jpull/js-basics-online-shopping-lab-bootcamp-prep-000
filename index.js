@@ -60,7 +60,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  if (cart) {
+    for (let i = 0, l = cart.length; i < l; i++) {
+      for (let item in cart[i]) {
+        console.log(cart[i]);
+      }
+    }
+  }
+  else { return "That item is not in your cart.";}
 }
 
 function placeOrder(cardNumber) {
