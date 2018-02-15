@@ -60,14 +60,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (cart) {
     for (let i = 0, l = cart.length; i < l; i++) {
       for (let itemName in cart[i]) {
-        if (itemName === item) console.log(cart.splice(i,1));
+        if (itemName === item) return(cart.splice(i,1));
       }
     }
-  }
-  else { return "That item is not in your cart.";}
+    return "That item is not in your cart.";
 }
 
 function placeOrder(cardNumber) {
