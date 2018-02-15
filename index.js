@@ -17,7 +17,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (!cart.length) { return "The line is currently empty."; }
 }
 
 function total() {
