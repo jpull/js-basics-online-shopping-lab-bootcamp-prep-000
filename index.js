@@ -34,10 +34,7 @@ function viewCart() {
   }
 
 function total() {
-  var output = [];
-  for (var i=0; i < cart.length ; ++i)
-    output.push(cart[i][field]);
-return output;
+
   // write your code here
 }
 
