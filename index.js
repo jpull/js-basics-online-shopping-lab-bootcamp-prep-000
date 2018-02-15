@@ -10,14 +10,14 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  var itemPrice = Math.floor((Math.random()*100)+1);
-  cart.push({[item]: itemPrice});
-  console.log(`${item} has been added to your cart.`);
-  return cart;
+  var itemPrice = Math.floor((Math.random()*100)+1)
+  cart.push({[item]: itemPrice})
+  console.log(`${item} has been added to your cart.`)
+  return cart
 }
 
 function viewCart() {
-  if (!cart.length) { return "The line is currently empty."; }
+  if (!cart.length) { return "The line is currently empty." }
 }
 
 function total() {
