@@ -48,15 +48,15 @@ function viewCart() {
 }
 
 function total() {
-  const l = cart.length;
-  for (let i = 0; i < l; i++) {
-    let itemAndPrice = cart[i];
-    let item = Object.keys(itemAndPrice)[0];
-    let price = itemAndPrice[item];
+  let t = 0;
 
-    var totalPrice = totalPrice + price;
+  for (let i = 0, l = cart.length; i < l; i++) {
+    for (let item in cart[i]) {
+      t += cart[i][item];
+    }
   }
-  return(totalPrice);
+
+  return t;
 }
 
 function removeFromCart(item) {
