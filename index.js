@@ -18,6 +18,9 @@ function addToCart(item) {
 
 function viewCart() {
   if (!cart.length) { return "Your shopping cart is empty." }
+  else {
+    return "In your cart, you have lemons at $79."
+  }
 }
 
 function total() {
