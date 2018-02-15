@@ -32,6 +32,7 @@ function viewCart() {
 
     itemsAndPrices.push(`${item} at \$${price}`);
   }
+}
 
 function total() {
 
